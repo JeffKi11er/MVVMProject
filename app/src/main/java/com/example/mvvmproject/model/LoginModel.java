@@ -20,12 +20,12 @@ public class LoginModel {
     }
 
     @Nullable
-    public String getName() {
+    public String getEmail() {
         return email;
     }
 
-    public void setName(@Nullable String name) {
-        this.email = name;
+    public void setEmail(@Nullable String email) {
+        this.email = email;
     }
 
     @Nullable
@@ -67,6 +67,13 @@ public class LoginModel {
         return false;
     }
     public boolean isValid(){
-        return !TextUtils.isEmpty(email)&&!TextUtils.isEmpty(passwords)&& getPasswords().length()>6 && hasNumber() && has1SpecialSymbol();
+        return !TextUtils.isEmpty(email)&&
+                !TextUtils.isEmpty(passwords)&&
+                getPasswords().length()>6 &&
+                hasNumber() &&
+                has1SpecialSymbol();
+    }
+
+    public void setEmail() {
     }
 }
