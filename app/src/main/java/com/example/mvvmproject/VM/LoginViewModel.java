@@ -13,11 +13,10 @@ public class LoginViewModel extends ViewModel {
     private LoginModel model;
     private SystemCallLogin loginCallBack;
 
-    public LoginViewModel(LoginModel model, SystemCallLogin loginCallBack) {
-        this.model = model;
+    public LoginViewModel(SystemCallLogin loginCallBack) {
+        this.model = new LoginModel();
         this.loginCallBack = loginCallBack;
     }
-
     public LoginModel getModel() {
         return model;
     }
